@@ -1,12 +1,3 @@
-// const form = document.querySelector('form');
-// form.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   if (validateCardDetails(form)) {
-//     console.log('datos válido... enviar...');
-//   } else {
-//     console.log('datos inválidos');
-//   }
-// });
 var $buttonNext = $('#next');
 var $inputCard = $('#cn');
 $inputCard.on('input', function(event) {
