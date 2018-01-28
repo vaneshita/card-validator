@@ -9,11 +9,11 @@
 // });
 var $buttonNext = $('#next');
 var $inputCard = $('#cn');
-function encontrar(array, n) {
+function encontrar(array, element) {
   var encontro = false;
   // your code here
   for (var i = 0; i < array.length; i++) {
-    if (array[i] === n) {
+    if (array[i] === element) {
       var encontro = true;
       return encontro;
     }
@@ -30,11 +30,15 @@ $inputCard.on('input', function(event) {
   });
 });
 console.log(data);
-console.log(data[localStorage.input]);
-console.log(Object.keys(data));
+console.log(data[localStorage.input][0]);
+console.log(Object.keys(data[localStorage.input]));
 var busquedaTarjeta = encontrar(Object.keys(data), localStorage.input);
 if (busquedaTarjeta) {
   $('#nroTarjeta').text(localStorage.input);
+  $('#name').text(data[localStorage.input][0]);
+  $('#date').text(data[localStorage.input][1]);
+  $('#cvv').text(data[localStorage.input][2]);
+  $('#verification').text(data[localStorage.input][3]);
 } else {
-  alert('La basre de datos se esta actualizand. Gracias por su comprension');
+  // alert('La basre de datos se esta actualizand. Gracias por su comprension');
 }
