@@ -8,7 +8,7 @@
 //   }
 // });
 var $buttonNext = $('#next');
-var $inputCard = $('#cn');
+var $inputCard = $('#nroCard');
 function encontrar(array, element) {
   var encontro = false;
   // your code here
