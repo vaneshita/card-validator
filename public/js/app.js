@@ -7,6 +7,7 @@
 //     console.log('datos inválidos');
 //   }
 // });
+
 var $buttonNext = $('#next');
 var $inputCard = $('.inputCard');
 var $inputDate = $('.inputDate');
