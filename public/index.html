@@ -9,12 +9,23 @@
   <body>
     <form>
       <div class="form-group">
-        <label for="nroCard">Número de tarjeta</label>
-        <input id="nroCard" name="cn" />
+        <label for="cn">Número de tarjeta</label>
+        <input class="inputCard" name="cn" />
       </div>
-      <!-- <input type="submit" value="Pagar" /> -->
+      <div class="form-group">
+        <label for="exp">Fecha de vencimiento</label>
+        <input class="inputDate" name="exp" />
+      </div>
+      <div class="form-group">
+        <label for="cvv">CVV</label>
+        <input class="inputCvv" name="cvv" />
+      </div>
+      <div class="form-group">
+        <label for="name">Nombre completo</label>
+        <input class="inputName" name="name" />
+      </div>
       <div class="btn-group btn-group-lg">
-        <button type="submit" class="btn btn-primary" id="next" name="button">continuar</button>
+        <button type="button" class="btn btn-primary" id="next" name="button">continuar</button>
       </div>
     </form>
     <script type="text/javascript" src="js/libreria.js"></script>

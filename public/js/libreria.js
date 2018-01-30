@@ -11,7 +11,9 @@
 
   // Funcion que valida la longitud del input ingresado por el usuario
   function longitud(input) {
-    if (input.trim().length === 16) {
+    if (input === undefined) {
+      return undefined;
+    } else if (input.trim().length === 16) {
       return input;
     }
   }
@@ -23,11 +25,41 @@
       return input;
     }
   }
-  var x = 0;
+  function soloLetras(input) {
+    var regex = /[A-Za-z]+$/;
+    if (regex.test(input)) {
+      return input;
+    }
+  }
+  function validarFormatoFecha(campo) {
+    var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
+    if (campo === undefined) {
+      return undefined;
+    } else if ((campo.match(RegExPattern))) {
+      return campo;
+    }
+  }
+  function validaCvv(cvv) {
+    if (cvv === undefined) {
+      return undefined;
+    } else if (cvv.trim().length === 4) {
+      return cvv;
+    }
+  }
+  function validaName(name) {
+    if (name === undefined) {
+      return undefined;
+    } else if (name.trim().length > 6) {
+      return name;
+    }
+  }
   var objeto = {
-    isValidCreditCard: function(numberCard, btn) {
+    isValidCreditCard: function(numberCard, date, cvv, name, btn) {
       var creditCardNumber = soloNumeros(longitud(numberCard));
-      if (creditCardNumber !== undefined) {
+      var validaDate = validarFormatoFecha(date);
+      var validarCvv = soloNumeros(validaCvv(cvv));
+      var validarName = soloLetras(validaName(name));
+      if (creditCardNumber !== undefined && validaDate !== undefined && validarCvv !== undefined && validarName !== undefined) {
         var arr = [];
         var sumaTotal = 0;
         for (var index = creditCardNumber.length - 1; index >= 0; index--) {
@@ -46,23 +78,19 @@
 
         if (sumaTotal % 10 === 0) {
           console.log('Es una tarjeta valida');
+          return true;
           activeButton(btn);
         } else {
           console.log('No es un numero valido');
+          return false;
           desactiveButton(btn);
         }
       } else {
         console.log('Verifique el numero de su tarjeta');
+        return false;
         desactiveButton(btn);
       }
     },
-    getX: function() {
-      return x;
-    },
-    incrementar: function() {
-      x++;
-      return this;
-    }
   };
   if (typeof window.objeto === 'undefined') {
     window.objeto = window._ = objeto;
