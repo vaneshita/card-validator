@@ -13,8 +13,6 @@ var $inputCard = $('.inputCard');
 var $inputDate = $('.inputDate');
 var $inputCvv = $('.inputCvv');
 var $inputName = $('.inputName');
-var arr = [$inputCard.val(), $inputDate.val(), $inputCvv.val(), $inputName.val()];
-console.log(arr);
 function encontrar(array, element) {
   var encontro = false;
   // your code here
@@ -25,35 +23,25 @@ function encontrar(array, element) {
     }
   }
 }
-$inputCard.on('input', function(event) {
-  event.preventDefault();
-  localStorage.inputCard = $(this).val();
-});
-$inputDate.on('input', function(event) {
-  event.preventDefault();
-  localStorage.inputDate = $(this).val();
-});
-$inputCvv.on('input', function(event) {
-  event.preventDefault();
-  localStorage.inputCvv = $(this).val();
-});
-$inputName.on('input', function(event) {
-  event.preventDefault();
-  localStorage.inputName = $(this).val();
-});
 $buttonNext.on('click', function(event) {
-  if (objeto.isValidCreditCard(localStorage.inputCard, localStorage.inputDate, localStorage.inputCvv, localStorage.inputName, $buttonNext)) {
-    $(location).attr('href', 'views/datosUsuario.html');
+  debugger;
+  if (objeto.isValidCreditCard($inputCard.val(), $inputDate.val(), $inputCvv.val(), $inputName.val())) {
+    var busquedaTarjeta = encontrar(Object.keys(data), $inputCard.val());
+    if (busquedaTarjeta) {
+      if (encontrar(data[$inputCard.val()], $inputCvv.val())) {
+        alert('Usuario Activo, tarjeta validada');
+        $buttonNext.attr('data-target', '#exampleModal');
+        $('#imgModal').attr('src', data[$inputCard.val()][data[$inputCard.val()].length - 1]);
+        $('.name').text($inputName.val());
+        $('card').text($inputCard.val());
+        $('.cvv').text($inputCvv.val());
+        $('.fecha').text($inputDate.val());
+      }
+    } else {
+      alert('Usuario activo No encontrado en la data');
+    }
   } else {
     console.log('error');
+    alert('los datos no son correctos');
   }
 });
-console.log(data);
-// console.log(data[localStorage.inputCard][0]);
-// console.log(Object.keys(data[localStorage.inputCard]));
-var busquedaTarjeta = encontrar(Object.keys(data), localStorage.inputCard);
-if (busquedaTarjeta) {
-
-} else {
-  // alert('La basre de datos se esta actualizand. Gracias por su comprension');
-}

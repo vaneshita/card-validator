@@ -1,14 +1,4 @@
 (function() {
-  // Funciones que habilita el boton del formulario
-  function activeButton(btn) {
-    btn.attr('disabled', false);
-  }
-
-  // Funcion que desabilita el boton del formulario
-  function desactiveButton(btn) {
-    btn.attr('disabled', true);
-  }
-
   // Funcion que valida la longitud del input ingresado por el usuario
   function longitud(input) {
     if (input === undefined) {
@@ -31,18 +21,26 @@
       return input;
     }
   }
-  function validarFormatoFecha(campo) {
-    var RegExPattern = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/;
-    if (campo === undefined) {
+  function validarFormatoFecha(fecha) {
+    debugger;
+    // Funcion validarFecha
+    // Escrita por Buzu feb 18 2010. (FELIZ CUMPLE BUZU!!!
+    // valida fecha en formato aaaa-mm-dd
+    var fechaArr = fecha.split('-');
+    var dia = fechaArr[2];
+    var mes = fechaArr[1];
+    var año = fechaArr[0];
+    var valor = new Date(año, mes - 1, dia); // mes empieza de cero Enero = 0
+    if ((valor.getFullYear() == año) && (valor.getMonth() == (mes-1)) && (valor.getDate() == dia)) {
+      return fecha;
+    } else {
       return undefined;
-    } else if ((campo.match(RegExPattern))) {
-      return campo;
     }
   }
   function validaCvv(cvv) {
     if (cvv === undefined) {
       return undefined;
-    } else if (cvv.trim().length === 4) {
+    } else if (cvv.trim().length === 6) {
       return cvv;
     }
   }
@@ -54,7 +52,8 @@
     }
   }
   var objeto = {
-    isValidCreditCard: function(numberCard, date, cvv, name, btn) {
+    isValidCreditCard: function(numberCard, date, cvv, name) {
+      debugger;
       var creditCardNumber = soloNumeros(longitud(numberCard));
       var validaDate = validarFormatoFecha(date);
       var validarCvv = soloNumeros(validaCvv(cvv));
@@ -79,16 +78,13 @@
         if (sumaTotal % 10 === 0) {
           console.log('Es una tarjeta valida');
           return true;
-          activeButton(btn);
         } else {
           console.log('No es un numero valido');
           return false;
-          desactiveButton(btn);
         }
       } else {
         console.log('Verifique el numero de su tarjeta');
         return false;
-        desactiveButton(btn);
       }
     },
   };
