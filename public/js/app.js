@@ -8,40 +8,38 @@
 //   }
 // });
 
-var $buttonNext = $('#next');
-var $inputCard = $('.inputCard');
-var $inputDate = $('.inputDate');
-var $inputCvv = $('.inputCvv');
-var $inputName = $('.inputName');
-function encontrar(array, element) {
-  var encontro = false;
-  // your code here
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] === element) {
-      var encontro = true;
-      return encontro;
-    }
-  }
-}
-$buttonNext.on('click', function(event) {
+var buttonNext = $('#next');
+var inputCard = $('.inputCard');
+var inputDate = $('.inputDate');
+var inputCvv = $('.inputCvv');
+var inputName = $('.inputName');
+var imgModal = $('#imgModal');
+var nameModal = $('.name');
+var cardModal = $('card');
+var cvvModal = $('.cvv');
+var dateModal = $('.fecha');
+var arr = Object.keys(data);
+var json = data;
+console.log(json);
+debugger;
+buttonNext.on('click', function() {
   debugger;
-  if (objeto.isValidCreditCard($inputCard.val(), $inputDate.val(), $inputCvv.val(), $inputName.val())) {
-    var busquedaTarjeta = encontrar(Object.keys(data), $inputCard.val());
-    if (busquedaTarjeta) {
-      if (encontrar(data[$inputCard.val()], $inputCvv.val())) {
-        alert('Usuario Activo, tarjeta validada');
-        $buttonNext.attr('data-target', '#exampleModal');
-        $('#imgModal').attr('src', data[$inputCard.val()][data[$inputCard.val()].length - 1]);
-        $('.name').text($inputName.val());
-        $('card').text($inputCard.val());
-        $('.cvv').text($inputCvv.val());
-        $('.fecha').text($inputDate.val());
-      }
-    } else {
-      alert('Usuario activo No encontrado en la data');
-    }
+  if (objeto.isValidCreditCard(inputName.val(), inputCard.val(), inputCvv.val(), inputDate.val(), arr, json)) {
+    alert('usuario valido');
+    buttonNext.attr('data-target', '#exampleModal');
+    imgModal.attr('src', json[inputCard.val()][json[inputCard.val()].length - 1]);
+    nameModal.text(inputName.val());
+    cardModal.text(inputCard.val());
+    cvvModal.text(inputCvv.val());
+    dateModal.text(inputDate.val());
   } else {
-    console.log('error');
-    alert('los datos no son correctos');
+    alert('No soy tarjeta');
   }
-});
+  // alert('Usuario Activo, tarjeta validada');
+  // btn.attr('data-target', '#exampleModal');
+  // imgModal.attr('src', data[numberCard][data[numberCard].length - 1]);
+  // nameModal.text(name);
+  // cardModal.text(numberCard);
+  // cvvModal.text(cvv);
+  // dateModal.text(date);
+})
