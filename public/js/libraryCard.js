@@ -25,37 +25,34 @@
       return input;
     }
   }
-  function validarFormatoFecha(fecha) {
-    debugger;
-    // Funcion validarFecha
-    // Escrita por Buzu feb 18 2010. (FELIZ CUMPLE BUZU!!!
-    // valida fecha en formato aaaa-mm-dd
-    var fechaArr = fecha.split('-');
-    var dia = fechaArr[2];
-    var mes = fechaArr[1];
-    var año = fechaArr[0];
-    var valor = new Date(año, mes - 1, dia); // mes empieza de cero Enero = 0
+ const validateFormatDate = (fecha) => {
+
+    let fechaArr = fecha.split('-');
+    let dia = fechaArr[2];
+    let mes = fechaArr[1];
+    let año = fechaArr[0];
+    let valor = new Date(año, mes - 1, dia); 
     if ((valor.getFullYear() == año) && (valor.getMonth() == (mes - 1)) && (valor.getDate() == dia)) {
       return fecha;
     } else {
       return undefined;
     }
   }
-  function validaCvv(cvv) {
+ const validateCvv = (cvv) =>{
     if (cvv === undefined) {
       return undefined;
     } else if (cvv.trim().length === 6) {
       return cvv;
     }
   }
-  function validaName(name) {
+  const validateName = (name) => {
     if (name === undefined) {
       return undefined;
     } else if (name.trim().length > 6) {
       return name;
     }
   }
-  function encontrar(array, element) {
+  const find = (array, element) =>{
     debugger;
     var encontro = false;
     // your code here
@@ -99,9 +96,9 @@
     }
   }
   function validaCampos(name, cvv, date) {
-    var validaDate = validarFormatoFecha(date);
-    var validarCvv = onlyNumbers(validaCvv(cvv));
-    var validarName = onlyLetters(validaName(name));
+    var validaDate = validateFormatDate(date);
+    var validarCvv = onlyNumbers(validateCvv(cvv));
+    var validarName = onlyLetters(validateName(name));
     if (validaDate !== undefined && validarCvv !== undefined && validarName !== undefined) {
       return true;
     } else {
@@ -112,8 +109,8 @@
     isValidCreditCard: function (name, numberCard, cvv, date, arr, json) {
       debugger;
       if (lhun(numberCard) && validaCampos(name, cvv, date)) {
-        if (encontrar(arr, numberCard)) {
-          if (encontrar(json[numberCard], cvv)) {
+        if (find(arr, numberCard)) {
+          if (find(json[numberCard], cvv)) {
             return true;
           }
         } else {
