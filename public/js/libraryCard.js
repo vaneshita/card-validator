@@ -1,7 +1,9 @@
-(function() {
-  // Funcion que valida la longitud del input ingresado por el usuario
-  function longitud(input) {
-    debugger;
+(function () {
+  let regex;
+  // Usando function expression para validar la cantidad de carácteres que ingresa el usuario como nro de tarjeta
+  var lengthCard = (input) => {
+    /* condicional para verificar si el campo esta vacío o contiene un nro de longitud correcta
+    (si campo esta vacío en  la fase de creación del contexto de ejecución el interprete asigna el valor undefined por default */
     if (input === undefined) {
       return undefined;
     } else if (input.trim().length === 16) {
@@ -9,15 +11,16 @@
     }
   }
 
-  // Funcion que valida la longitud del input ingresado por el usuario
-  function soloNumeros(input) {
-    var regex = /^[0-9]+$/;
+  // función arrown en ES6 y utilizando expresión regular
+  const onlyNumbers = (input) => {
+    regex = /^[0-9]+$/;
     if (regex.test(input)) {
       return input;
     }
   }
-  function soloLetras(input) {
-    var regex = /[A-Za-z]+$/;
+
+  const onlyLetters = (input) => {
+    regex = /[A-Za-z]+$/;
     if (regex.test(input)) {
       return input;
     }
@@ -32,7 +35,7 @@
     var mes = fechaArr[1];
     var año = fechaArr[0];
     var valor = new Date(año, mes - 1, dia); // mes empieza de cero Enero = 0
-    if ((valor.getFullYear() == año) && (valor.getMonth() == (mes-1)) && (valor.getDate() == dia)) {
+    if ((valor.getFullYear() == año) && (valor.getMonth() == (mes - 1)) && (valor.getDate() == dia)) {
       return fecha;
     } else {
       return undefined;
@@ -65,7 +68,7 @@
   }
   function lhun(numberCard) {
     // debugger;
-    var creditCardNumber = soloNumeros(longitud(numberCard));
+    var creditCardNumber = onlyNumbers(lengthCard(numberCard));
     if (creditCardNumber !== undefined) {
       var arr = [];
       var sumaTotal = 0;
@@ -97,16 +100,16 @@
   }
   function validaCampos(name, cvv, date) {
     var validaDate = validarFormatoFecha(date);
-    var validarCvv = soloNumeros(validaCvv(cvv));
-    var validarName = soloLetras(validaName(name));
+    var validarCvv = onlyNumbers(validaCvv(cvv));
+    var validarName = onlyLetters(validaName(name));
     if (validaDate !== undefined && validarCvv !== undefined && validarName !== undefined) {
       return true;
     } else {
       return false;
     }
   }
-  var objeto = {
-    isValidCreditCard: function(name, numberCard, cvv, date, arr, json) {
+  var libraryCard = {
+    isValidCreditCard: function (name, numberCard, cvv, date, arr, json) {
       debugger;
       if (lhun(numberCard) && validaCampos(name, cvv, date)) {
         if (encontrar(arr, numberCard)) {
@@ -121,8 +124,8 @@
       }
     }
   };
-  if (typeof window.objeto === 'undefined') {
-    window.objeto = window._ = objeto;
+  if (typeof window.libraryCard === 'undefined') {
+    window.libraryCard = window._ = libraryCard;
   } else {
     console.log('Ya existe libreria');
   }

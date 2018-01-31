@@ -1,12 +1,3 @@
-// const form = document.querySelector('form');
-// form.addEventListener('submit', (event) => {
-//   event.preventDefault();
-//   if (validateCardDetails(form)) {
-//     console.log('datos válido... enviar...');
-//   } else {
-//     console.log('datos inválidos');
-//   }
-// });
 
 var buttonNext = $('#next');
 var inputCard = $('.inputCard');
@@ -24,7 +15,7 @@ console.log(json);
 debugger;
 buttonNext.on('click', function() {
   debugger;
-  if (objeto.isValidCreditCard(inputName.val(), inputCard.val(), inputCvv.val(), inputDate.val(), arr, json)) {
+  if (libraryCard.isValidCreditCard(inputName.val(), inputCard.val(), inputCvv.val(), inputDate.val(), arr, json)) {
     alert('usuario valido');
     buttonNext.attr('data-target', '#exampleModal');
     imgModal.attr('src', json[inputCard.val()][json[inputCard.val()].length - 1]);
