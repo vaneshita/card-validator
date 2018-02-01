@@ -10,8 +10,7 @@ $(document).ready(function() {
   var cvvModal = $('.cvv');
   var dateModal = $('.fecha');
   buttonNext.on('click', function() {
-    debugger;
-    if (libraryCard.isValidCreditCard(inputName.val(), inputCard.val(), inputCvv.val(), inputDate.val(), data)) {
+    if (libraryCard.isValidCreditCard(inputName.val(), inputCard.val(), inputCvv.val(), inputDate.val())) {
       alert('usuario valido');
       buttonNext.attr('data-target', '#exampleModal');
       imgModal.attr('src', data[inputCard.val()][data[inputCard.val()].length - 1]);

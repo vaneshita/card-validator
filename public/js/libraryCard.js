@@ -96,8 +96,8 @@
     return condition;
   }
   var libraryCard = {
-    isValidCreditCard: function(name, numberCard, cvv, date, arr, json) {
-      if (lhun(numberCard) && validaCampos(name, cvv, date)) {
+    isValidCreditCard: function(name, numberCard, cvv, date) {
+      if (lhun(numberCard) && validateFields(name, cvv, date)) {
         /* El metodo find devuelve el valor del primer elemento del array que cumple la función de prueba proporcionada. En cualquier otro caso se devuelve undefined. ES6*/
         if (Object.keys(data).find(i => i === numberCard)) {
           if (data[numberCard].find(i => i === cvv)) {

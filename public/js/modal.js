@@ -1,6 +1,6 @@
-$(document).ready(function () {
-    $('.carousel').carousel();
-    $('.popover-dismiss').popover({
-        trigger: 'focus'
-    })
+$(document).ready(function() {
+  $('.carousel').carousel();
+  $('.popover-dismiss').popover({
+    trigger: 'focus'
+  });
 });
