@@ -63,10 +63,10 @@ ___
 
 ### Link de referencias
 
-https://www.youtube.com/watch?v=xO_D1y5ywfE
-https://www.w3schools.com/nodejs/default.asp
-https://carlosazaustre.es/ecmascript-6-el-nuevo-estandar-de-javascript/
-https://platzi.com/blog/ecmascript-nueva-sintaxis/
++ https://www.youtube.com/watch?v=xO_D1y5ywfE
++ https://www.w3schools.com/nodejs/default.asp
++ https://carlosazaustre.es/ecmascript-6-el-nuevo-estandar-de-javascript/
++ https://platzi.com/blog/ecmascript-nueva-sintaxis/
 
 
 [trello]: https://trello.com/b/jyHMZGsC/plan-de-accion-libreria-validar-tarjeta
