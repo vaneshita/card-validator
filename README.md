@@ -43,7 +43,7 @@ ___
   + Aprendimos a crear issues y lo pusimos en practica.
   + Averiguamos sobre node.js y inicializamos nuestro proyecto con npm init y git init
   + Creamos un index.html y comenzamos a maquetar un ejemplo de lo que podria llegar a ser nuestro producto final.
-    ![planes](../assets/images/1.png)
+    ![planes](.../public/assets/images/1.png)
 
   ___**SEMANA2**___
 
