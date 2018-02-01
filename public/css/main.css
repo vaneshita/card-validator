@@ -2,14 +2,30 @@
 .porcent100{
   width: 100%;
 }
+h1 {
+  margin-right: 681px;
+  color: white;
+  font-style: italic;
+}
+h2 {
+  margin-left: 47px;
+  color: blue;
+}
 
+h3 {
+  color: #000099;
+}
 .download {
-  height: 20vh;
+  height: 30vh;
   margin-top: 2em;
+}
+.download1 {
+  height: 30vh;
+  margin-top: 8em;
 }
 .formulario {
   height: 40vh;
-  margin-top: 2em;
+  margin-top: 7em;
 }
 img, .carrusel {
   height: 20vh;
@@ -42,4 +58,11 @@ background: none !important;
   .navbar {
     height: 10vh;
   }
+ h1{
+  margin-right: 681px;
+ }
+ h2{
+ margin-left: 345px;
+ color: blue;
+ }
 }

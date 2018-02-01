@@ -18,11 +18,13 @@
     <a class="carousel-control-prev hidden-xs-down" href="../view/luhn.htm" role="button" data-slide="prev">
       <span>INICIO</span>
     </a>
+    
     <!-- Navbar content -->
     <button class="navbar-toggler hidden-sm-up " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <h1>LIBRARY-CARD</h1>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <a class="navbar-brand" href="#">Hidden brand</a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -76,26 +78,46 @@
   <!-- fin de slider -->
   <section class="download">
     <div class="container d-flex flex-column justify-between">
-      <div class="row d-flex">
-        <div class="col-6 col-md-6">
-          <button>download</button>
-          <p>libraryCard.min.js</p>
-        </div>
-        <div class="col-6 col-md-6">
-          <h3>install</h3>
-          <p>npm install libraryCard --save</p>
-          <p>install-package library.js</p>
-        </div>
+    <div class="row d-flex">
+        <h2>Verificador de Tarjetas</h2>
+      <div class="col-12 col-md-6">
+          <h3>download</h3>
+        <p>libraryCard.min.js</p>
+        <button class="btn btn-primary">download</button>
+      </div>
+      <div class="col-12 col-md-6">
+        <h3>install</h3>
+        <p>npm install libraryCard --save</p>
+        <p>install-package library.js</p>
       </div>
     </div>
+    </div>
   </section>
+    <section class="download1">
+    <div class="container d-flex flex-column justify-between">
+        <div class="row d-flex">
+            <div class="col-12 col-md-6">
+                <h3 class="col-12">Format card</h3>
+                <p class="col-12">libraryCard(nrtarjeta,cvv,name,date)</p>
+              </div>
+      <div class="col-12 col-md-6">
+          <h3 class="col-12">libraryCard()</h3>
+          <p>Usanso los parametros(name)</p>
+          <p>Usanso los parametros (n° card)</p>
+          <p>Usanso los parametros (date)</p>
+          <p>Usanso los parametros (n° cvv)</p>
+        </div>
+    </div>
+  </div>
+  </section>
+  
   <!-- inicio de  formulario -->
   <section class="formulario">
     <div class="container d-flex flex-column align-items-center">
       <div class="row porcent100">
         <form class="needs-validation col-12 col-md-12" novalidate>
           <div class="form-row col-md-12">
-            <div class="col-12 col-md-12 mb-3">
+            <div class="col-12 col-md-10 mb-3">
               <label for="validationTooltip01" class="text-primary font-weight-bold h5">Name completed</label>
               <input type="text" class="form-control inputName" id="name" placeholder="Name completed" required>
               <div class="invalid-tooltip">
@@ -104,7 +126,7 @@
             </div>
           </div>
           <div class="form-row col-md-12">
-            <div class="col-12 col-md-12 mb-3">
+            <div class="col-12 col-md-10 mb-3">
               <label id="box" for="validationTooltip03" class="text-primary font-weight-bold h5">numero de tarjeta</label>
               <input class="form-control inputCard" id="cn" placeholder="numero de tarjeta" required>
               <div class="invalid-tooltip">
@@ -121,7 +143,7 @@
               </div>
             </div>
             <div class="form-row col-12 col-md-12 hidden-sm-up ">
-              <div class="col-9 col-md-6 mb-3">
+              <div class="col-9 col-md-4 mb-3">
                 <label id="box" for="validationTooltip04" class="text-primary font-weight-bold h5">f. Vencimiento</label>
                 <input type="date" class="form-control inputDate" id="exp" placeholder="fecha de vencimiento" required>
                 <div class="invalid-tooltip">
