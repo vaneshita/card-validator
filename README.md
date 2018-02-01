@@ -35,7 +35,7 @@ ___
 
 + Creamos un [tablero][trello] en trello para mantener un registro de las tareas que iremos realizando cada una.
 
- __**SEMANA1**__
+ ___**SEMANA1**___
  
   + Formamos equipo con mi compañera Yolanda.
   + Elegimos el RETO 1: VALIDADOR DE DATOS DE TARJETAS DE CRÉDITO e hicimos fork al reto modelo
@@ -43,6 +43,15 @@ ___
   + Aprendimos a crear issues y lo pusimos en practica.
   + Averiguamos sobre node.js y inicializamos nuestro proyecto con npm init y git init
   + Creamos un index.html y comenzamos a maquetar un ejemplo de lo que podria llegar a ser nuestro producto final.
+    ![planes](public/assets/img/1.png)
+  
+  ___**SEMANA2**___
+  
+  Implementando funcionalidad anuestra libreria para ello hicimos un trabajo colaborativo en git y nos reunimos el fin de semana y en     las tardes para complementar los conceptos que habiamos averiguado y asi poder ponerlo en practica en la libreria, asi tambien nos       sirvio bastante las clases de fundamentos de javascript.
+  
+  ___**SEMANA3**___
+  
+  
   
 ### Herramientas Utilizadas
 
