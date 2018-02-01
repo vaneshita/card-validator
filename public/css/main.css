@@ -11,7 +11,9 @@ h2 {
   margin-left: 47px;
   color: blue;
 }
-
+.color {
+  background-color: lightgray;
+}
 h3 {
   color: #000099;
 }

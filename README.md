@@ -43,7 +43,7 @@ ___
   + Aprendimos a crear issues y lo pusimos en practica.
   + Averiguamos sobre node.js y inicializamos nuestro proyecto con npm init y git init
   + Creamos un index.html y comenzamos a maquetar un ejemplo de lo que podria llegar a ser nuestro producto final.
-    ![planes](public/assets/images/1.png)
+    
 
   ___**SEMANA2**___
 
@@ -57,16 +57,22 @@ ___
    Demo final
    + implementando imagenes 
    + verificando la funcionabilidad.
-   + Trabajando con ES6 .
-
+   + Trabajando con ES6.
+   + Investigando sobre modules de node.js
+   + Como publicar mi libreria.
 
 ### Herramientas Utilizadas
-
++ ES5
 + ES6
 + HTML5
 + CSS3
 + BOOTSTRAP4
 ___
+
+### Imagenes 
+![planes](public/assets/images/1.png)
+![planes](public/assets/images/capture.png)
+![planes](public/assets/images/capture1.png)
 
 ### Link de referencias
 
@@ -74,6 +80,8 @@ ___
 + https://www.w3schools.com/nodejs/default.asp
 + https://carlosazaustre.es/ecmascript-6-el-nuevo-estandar-de-javascript/
 + https://platzi.com/blog/ecmascript-nueva-sintaxis/
++ https://www.youtube.com/watch?v=hHdmYbQvc7Y&index=17&list=PLoNyKJJ130VEz1KUQBh1rBkcb1nlP8kA_
++ http://www.ecma-international.org/ecma-262/6.0/#sec-getmethod
 
 ___
 
@@ -88,9 +96,9 @@ El plugin debe recibir una referencia a un elemento del DOM que contenga
 `<input>`s con los siguientes nombres (atributo `name`):
 
 * `cn` (Card Number): El número de la tarjeta de crédito
-* `exp` (Expiry Date): Fecha de expiración
-* `cvv` (Card Verification Value): Código de validación de 3 dígitos
-* `name`: Nombre completo como aparece en la tarjeta
+* `exp` (Expiry Date): Fecha de vencimiento
+* `cvv` (Card Verification Value): Código de validación de 4 dígitos
+* `name`: Nombre completo del usuario que aparece en la tarjeta
 
 ___
 
@@ -133,7 +141,7 @@ form.addEventListener('submit', (e) => {
 
 A la hora de hacer las validaciones, la librería debería de añadir la clase
 `.error` a los `<input>`s que no pasen la validación, o la clase `.success`
-en caso de que sí pase.
+en caso de que sí pase asi agregando una entorno visual para que vea el error.
 
 ### **Autoras**
 
