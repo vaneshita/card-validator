@@ -4,7 +4,7 @@ Creamos una librería que valida un tarjeta de crédito usuando como datos de en
 ___
 
 ### REQUISITOS
-Implementar un validador de datos de tarjeta de crédito. La librería debería validar el número de tarjeta de crédito (usando algoritmo de Luhn), fecha de vencimiento, codigo de verificación (cvv) y nombre completo que aparece en la tarjeta.
+Implementar un validador de datos de tarjeta de crédito. La librería debería validar el número de tarjeta de crédito (usando algoritmo de Luhn), fecha de vencimiento, codigo de verificación (cvv) y nombre del usuario que aparece en la tarjeta.
 
 + README.md con descripción del módulo, instrucciones de instalación, uso y documentación del API.
 index.js: Librería debe exportar una función u objeto al entorno global (window) y hacer uso de features de ES6 donde sea apropiado.
@@ -21,7 +21,7 @@ Integración continua con Travis o Circle CI
 ___
 
 ### ¿Que es una libreria en JS?
-Es un conjunto de implementaciones funcionales, codificadas en un lenguaje de programación, que ofrece una interfaz bien definida para la funcionalidad que se invoca.
+Es un conjunto de implementaciones funcionales, codificadas en un lenguaje de programación, que ofrece una interfaz bien definida para la funcionalidad que fue creada.
 
 ### ¿Que es node.js?
 Node.js es una librería y entorno de ejecución de E/S dirigida por eventos y por lo tanto asíncrona que se ejecuta sobre el intérprete de JavaScript creado por Google V8.
@@ -37,7 +37,7 @@ ___
 
  ___**SEMANA1**___
 
-  + Formamos equipo con mi compañera Yolanda.
+  + Formamos equipo.
   + Elegimos el RETO 1: VALIDADOR DE DATOS DE TARJETAS DE CRÉDITO e hicimos fork al reto modelo
   + Escribimos nuestra primera version de readme de la cual recibimos enriquecedores feedback los cuales ayudaron a mejorar nuestro         trabajo.
   + Aprendimos a crear issues y lo pusimos en practica.
@@ -47,10 +47,17 @@ ___
 
   ___**SEMANA2**___
 
-  Implementando funcionalidad anuestra libreria para ello hicimos un trabajo colaborativo en git y nos reunimos el fin de semana y en     las tardes para complementar los conceptos que habiamos averiguado y asi poder ponerlo en practica en la libreria, asi tambien nos       sirvio bastante las clases de fundamentos de javascript.
+  Implementando funcionalidad anuestra libreria para ello hicimos un trabajo colaborativo en git y nos reunimos el fin de semana y en las tardes para complementar los conceptos que habiamos averiguado y asi poder ponerlo en practica en la libreria, asi tambien nossirvio bastante las clases de fundamentos de javascript
+  Trabanjando juntas.
+  + Averiguando sobre la libreria moments.js para asi guiarnos.
+  + Creando una interfaz agradable al usuario.
+
 
   ___**SEMANA3**___
    Demo final
+   + implementando imagenes 
+   + verificando la funcionabilidad.
+   + Trabajando con ES6 .
 
 
 ### Herramientas Utilizadas
