@@ -68,8 +68,9 @@ ___
 + https://carlosazaustre.es/ecmascript-6-el-nuevo-estandar-de-javascript/
 + https://platzi.com/blog/ecmascript-nueva-sintaxis/
 
+___
 
-[trello]: https://trello.com/b/jyHMZGsC/plan-de-accion-libreria-validar-tarjeta
+
 * **Track:** _Common Core_
 * **Curso:** _JS Deep Dive: Crea tu propia librería usando JavaScript_
 * **Unidad:** _Producto final_
