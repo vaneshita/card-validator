@@ -54,7 +54,8 @@
       return name;
     }
   };
- var lhun = (numberCard) => {
+
+  var lhun = (numberCard) => {
     var creditCardNumber = onlyNumbers(lengthCard(numberCard));
     if (creditCardNumber !== undefined) {
       let arr = [];
@@ -87,14 +88,14 @@
       console.log('Verifique el numero de su tarjeta');
       return false;
     }
-  }
- var validateFields = (name, cvv, date)=> {
+  };
+  var validateFields = (name, cvv, date)=> {
     var validaDate = validateFormatDate(date);
     var validarCvv = onlyNumbers(validateCvv(cvv));
     var validarName = onlyLetters(validateName(name));
     var condition = (validaDate !== undefined && validarCvv !== undefined && validarName !== undefined) ? true : false;
     return condition;
-  }
+  };
   var libraryCard = {
     isValidCreditCard: function(name, numberCard, cvv, date) {
       if (lhun(numberCard) && validateFields(name, cvv, date)) {
