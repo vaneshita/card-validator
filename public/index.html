@@ -4,10 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Document</title>
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+  <title>LibraryCard</title>
   <link rel="stylesheet" href="vendors/bootstrap-4/css/bootstrap.min.css">
   <link rel="stylesheet" href="vendors/tether/css/tether.min.css">
   <link rel="stylesheet" href="css/main.css">
@@ -15,32 +12,8 @@
 
 <body>
   <nav class="navbar navbar-dark bg-primary ">
-    <a class="carousel-control-prev hidden-xs-down" href="../view/luhn.htm" role="button" data-slide="prev">
-      <span>INICIO</span>
-    </a>
-
-    <!-- Navbar content -->
-    <button class="navbar-toggler hidden-sm-up " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+     <!-- Navbar content -->
     <h1>LIBRARY-CARD</h1>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#">Hidden brand</a>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
-        </li>
-      </ul>
-    </div>
   </nav>
   <!-- carrusel -->
   <div class="space"></div>
@@ -76,45 +49,11 @@
     <div class="space2"></div>
   </section>
   <!-- fin de slider -->
-  <section class="download">
-    <div class="container d-flex flex-column justify-between">
-    <div class="row d-flex">
-        <h2>Verificador de Tarjetas</h2>
-      <div class="col-12 col-md-6">
-        <div class="color col-md-8">
-          <h3>download</h3>
-        <p>libraryCard.min.js</p>
-        <button class="btn btn-primary">download</button>
-      </div>
-      </div>
-      <div class="col-12 col-md-6">
-          <div class="color col-md-8">
-        <h3>install</h3>
-        <p>npm install libraryCard --save</p>
-        <p>install-package library.js</p>
-      </div>
-      </div>
-    </div>
-    </div>
-  </section>
-    <section class="download1">
-    <div class="container d-flex flex-column justify-between">
-        <div class="row d-flex">
-            <div class="col-12 col-md-6">
-                <div class="color col-md-8">
-                <h3 class="col-12">Format card</h3>
-                <p class="col-12">libraryCard(nrtarjeta,cvv,name,date)</p>
-              </div>
-            </div>
-      <div class="col-12 col-md-6">
-          <div class="color col-md-8">
-          <h3 class="col-12">libraryCard()</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-
+ 
+<section class="formulario1">
+  <h2>LibraryCard.js te ofrece</h2>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam excepturi quisquam nobis quo ad laboriosam quos eveniet rerum dolorem accusamus, id odio? Nobis aut ut, accusamus repudiandae explicabo earum hic.</p>
+</section>
   <!-- inicio de  formulario -->
   <section class="formulario">
     <div class="container d-flex flex-column align-items-center">
@@ -122,8 +61,8 @@
         <form class="needs-validation col-12 col-md-12" novalidate>
           <div class="form-row col-md-12">
             <div class="col-12 col-md-10 mb-3">
-              <label for="validationTooltip01" class="text-primary font-weight-bold h5">Name completed</label>
-              <input type="text" class="form-control inputName" id="name" placeholder="Name completed" required>
+              <label for="validationTooltip01" class="text-primary font-weight-bold h5">Nombre Completo</label>
+              <input type="text" class="form-control inputName" id="name" placeholder="Nombre Completo" required>
               <div class="invalid-tooltip">
                 campo obligatorio.
               </div>
@@ -131,34 +70,24 @@
           </div>
           <div class="form-row col-md-12">
             <div class="col-12 col-md-10 mb-3">
-              <label id="box" for="validationTooltip03" class="text-primary font-weight-bold h5">numero de tarjeta</label>
-              <input class="form-control inputCard" id="cn" placeholder="numero de tarjeta" required>
-              <div class="invalid-tooltip">
-                campo obligatorio.
-              </div>
+              <label id="box" for="validationTooltip03" class="text-primary font-weight-bold h5">Numero de Tarjeta</label>
+              <input class="form-control inputCard" id="cn" placeholder="Numero de Tarjeta" required>
             </div>
           </div>
           <div class="form-row col-12 col-md-12">
             <div class="col-5 col-md-4 mb-3">
               <label id="box" for="validationTooltip03" class="text-primary font-weight-bold h5">N° CVV</label>
               <input class="form-control inputCvv" id="cn" placeholder="cvv" required>
-              <div class="invalid-tooltip">
-                campo obligatorio.
-              </div>
             </div>
             <div class="form-row col-12 col-md-12 hidden-sm-up ">
               <div class="col-9 col-md-4 mb-3">
-                <label id="box" for="validationTooltip04" class="text-primary font-weight-bold h5">f. Vencimiento</label>
-                <input type="date" class="form-control inputDate" id="exp" placeholder="fecha de vencimiento" required>
-                <div class="invalid-tooltip">
-                  Please provide a valid state.
-                </div>
+                <label id="box" for="validationTooltip04" class="text-primary font-weight-bold h5">Fecha de Expiración</label>
+                <input type="date" class="form-control inputDate" id="exp" placeholder="Fecha de Expiración" required>
               </div>
-
             </div>
           </div>
           <button id="next" type="button" class="btn btn-primary" data-toggle="modal" data-target="">
-            Submit form
+            Enviar
           </button>
         </form>
       </div>
@@ -181,7 +110,7 @@
             <img id="imgModal" src="assets/images/images.jpg" alt="Responsive image" class="rounded-circle Responsive image">
           </picture>
           <div class="d-flex flex-column">
-            <h2>Usuario Valido</h2>
+            <h4>Usuario Valido</h4>
             <label class="name"></label>
             <label class="card"></label>
             <label class="cvv"></label>
@@ -194,10 +123,6 @@
       </div>
     </div>
   </div>
-
-  <button tabindex="0" class="btn btn-danger float-right" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover"
-    data-content="hola">
-    Info</button>
   <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>

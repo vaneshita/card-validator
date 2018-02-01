@@ -17,17 +17,24 @@ h2 {
 h3 {
   color: #000099;
 }
-.download {
-  height: 30vh;
-  margin-top: 2em;
-}
-.download1 {
-  height: 30vh;
-  margin-top: 8em;
+.formulario1 {
+  height: 60vh;
+  width: 40%;
+  margin-top: 7em;
+  border-radius: 6px;
+  border: 2px solid #000099;
+  margin-left: 400px;
+  padding: 2em 0;
+  background-color: lightgray;
 }
 .formulario {
-  height: 40vh;
+  height: 60vh;
+  width: 40%;
   margin-top: 7em;
+  border-radius: 6px;
+  border: 2px solid #000099;
+  margin-left: 400px;
+  padding: 2em 0;
 }
 img, .carrusel {
   height: 20vh;
@@ -53,10 +60,9 @@ background: none !important;
   }
   .formulario {
     margin-top: 5em;
+    margin-left: 350px;
   }
-  .download {
-    margin-top: 4em;
-  }
+  
   .navbar {
     height: 10vh;
   }
