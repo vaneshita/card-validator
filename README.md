@@ -20,7 +20,7 @@ Integración continua con Travis o Circle CI
 
 ___
 
-### ¿QUE ES UNA LIBRERIA EN JS?
+### ¿Que es una libreria en JS?
 Es un conjunto de implementaciones funcionales, codificadas en un lenguaje de programación, que ofrece una interfaz bien definida para la funcionalidad que se invoca.
 
 ### ¿Que es node.js?
@@ -35,7 +35,7 @@ ___
 
 + Creamos un [tablero][trello] en trello para mantener un registro de las tareas que iremos realizando cada una.
 
- **SEMANA1**
+ _**SEMANA1**_
  
   + Formamos equipo con mi compañera Yolanda.
   + Elegimos el RETO 1: VALIDADOR DE DATOS DE TARJETAS DE CRÉDITO e hicimos fork al reto modelo
