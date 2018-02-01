@@ -54,7 +54,7 @@
       return name;
     }
   };
-  function lhun(numberCard) {
+ var lhun = (numberCard) => {
     var creditCardNumber = onlyNumbers(lengthCard(numberCard));
     if (creditCardNumber !== undefined) {
       let arr = [];
@@ -88,7 +88,7 @@
       return false;
     }
   }
-  function validateFields(name, cvv, date) {
+ var validateFields = (name, cvv, date)=> {
     var validaDate = validateFormatDate(date);
     var validarCvv = onlyNumbers(validateCvv(cvv));
     var validarName = onlyLetters(validateName(name));
