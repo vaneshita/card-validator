@@ -1,10 +1,10 @@
-# Valida datos de tarjetas de crédito
+## LibraryCard.js
 
-Implementar un validador de datos de tarjeta de crédito. La librería debería validar el número de tarjeta de crédito (usando algoritmo de Luhn), fecha de vencimiento, codigo de verificación (cvv) y nombre completo que aparece en la tarjeta.
-
+Creamos una librería que valida un tarjeta de crédito usuano como datos de entrada el nombre del usuario, código de verificacion, fecha de vencimiento y el número de la tarjeta de crédito.Para ello ultilizamos como base el algoritmo de Lhun.
 ___
 
-## REQUISITOS
+### REQUISITOS
+Implementar un validador de datos de tarjeta de crédito. La librería debería validar el número de tarjeta de crédito (usando algoritmo de Luhn), fecha de vencimiento, codigo de verificación (cvv) y nombre completo que aparece en la tarjeta.
 
 + README.md con descripción del módulo, instrucciones de instalación, uso y documentación del API.
 index.js: Librería debe exportar una función u objeto al entorno global (window) y hacer uso de features de ES6 donde sea apropiado.
@@ -20,28 +20,38 @@ Integración continua con Travis o Circle CI
 
 ___
 
-## Equipo conformado por
-
-+ YOLANDA CHAVEZ
-+ VANESSA MENDOZA
-
-___
-
-## Herramientas Utilizadas
-
-+ HTML5
-+ CSS3
-+ BOOTSTRAP4
-___
-
 ### ¿QUE ES UNA LIBRERIA EN JS?
 Es un conjunto de implementaciones funcionales, codificadas en un lenguaje de programación, que ofrece una interfaz bien definida para la funcionalidad que se invoca.
+
+### ¿Que es node.js?
+Node.js es una librería y entorno de ejecución de E/S dirigida por eventos y por lo tanto asíncrona que se ejecuta sobre el intérprete de JavaScript creado por Google V8.
+
+### ¿Que es el algoritmo de Luhn?
+El algoritmo de Luhn es un método creado para la verificación de números de identificación, como los números de las tarjetas de crédito (Visa, MasterCard).
 
 ___
 
 ### PLANIFICACIÓN
 
 + Creamos un [tablero][trello] en trello para mantener un registro de las tareas que iremos realizando cada una.
+
+ **SEMANA1**
+ 
+  + Formamos equipo con mi compañera Yolanda.
+  + Elegimos el RETO 1: VALIDADOR DE DATOS DE TARJETAS DE CRÉDITO e hicimos fork al reto modelo
+  + Escribimos nuestra primera version de readme de la cual recibimos enriquecedores feedback los cuales ayudaron a mejorar nuestro         trabajo.
+  + Aprendimos a crear issues y lo pusimos en practica.
+  + Averiguamos sobre node.js y inicializamos nuestro proyecto con npm init y git init
+  + Creamos un index.html y comenzamos a maquetar un ejemplo de lo que podria llegar a ser nuestro producto final.
+  
+### Herramientas Utilizadas
+
++ ES6
++ HTML5
++ CSS3
++ BOOTSTRAP4
+___
+
 
 [trello]: https://trello.com/b/jyHMZGsC/plan-de-accion-libreria-validar-tarjeta
 * **Track:** _Common Core_
@@ -60,7 +70,7 @@ El plugin debe recibir una referencia a un elemento del DOM que contenga
 
 ___
 
-## Ejemplo
+### Ejemplo
 
 ```html
 <form>
