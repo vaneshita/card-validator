@@ -35,7 +35,7 @@ ___
 
 + Creamos un [tablero][trello] en trello para mantener un registro de las tareas que iremos realizando cada una.
 
- _**SEMANA1**_
+ __**SEMANA1**__
  
   + Formamos equipo con mi compañera Yolanda.
   + Elegimos el RETO 1: VALIDADOR DE DATOS DE TARJETAS DE CRÉDITO e hicimos fork al reto modelo
