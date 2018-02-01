@@ -1,7 +1,8 @@
-(function () {
+// Funcion statement autoinvocada, local para encapsular el codigo y ser mas segura
+(function() {
   let regex;
   // Usando function expression para validar la cantidad de carácteres que ingresa el usuario como nro de tarjeta
-  var lengthCard = (input) => {
+  const lengthCard = (input) => {
     /* condicional para verificar si el campo esta vacío o contiene un nro de longitud correcta
     (si campo esta vacío en  la fase de creación del contexto de ejecución el interprete asigna el valor undefined por default */
     if (input === undefined) {
@@ -9,7 +10,7 @@
     } else if (input.trim().length === 16) {
       return input;
     }
-  }
+  };
 
   // función arrown en ES6 y utilizando expresión regular
   const onlyNumbers = (input) => {
@@ -17,73 +18,65 @@
     if (regex.test(input)) {
       return input;
     }
-  }
+  };
 
   const onlyLetters = (input) => {
     regex = /[A-Za-z]+$/;
     if (regex.test(input)) {
       return input;
     }
-  }
- const validateFormatDate = (fecha) => {
-
-    let fechaArr = fecha.split('-');
-    let dia = fechaArr[2];
-    let mes = fechaArr[1];
-    let año = fechaArr[0];
-    let valor = new Date(año, mes - 1, dia); 
-    if ((valor.getFullYear() == año) && (valor.getMonth() == (mes - 1)) && (valor.getDate() == dia)) {
-      return fecha;
+  };
+  // validamos fecha usando el metodo Date con ayuda del metodo split(String o literal de cadena que se va a dividir para ser guardado en un array)
+  const validateFormatDate = (date) => {
+    let dateArr = date.split('-');
+    let day = dateArr[2];
+    let month = dateArr[1];
+    let year = dateArr[0];
+    let dateValue = new Date(year, month - 1, day);
+    if ((dateValue.getFullYear() == year) && (dateValue.getMonth() == (month - 1)) && (dateValue.getDate() == day)) {
+      return date;
     } else {
       return undefined;
     }
-  }
- const validateCvv = (cvv) =>{
+  };
+  // usuando el metodo trim para quitar espacio en blanco.
+  const validateCvv = (cvv) =>{
     if (cvv === undefined) {
       return undefined;
     } else if (cvv.trim().length === 6) {
       return cvv;
     }
-  }
+  };
   const validateName = (name) => {
     if (name === undefined) {
       return undefined;
     } else if (name.trim().length > 6) {
       return name;
     }
-  }
-  const find = (array, element) =>{
-    debugger;
-    var encontro = false;
-    // your code here
-    for (var i = 0; i < array.length; i++) {
-      if (array[i] === element) {
-        var encontro = true;
-        return encontro;
-      }
-    }
-  }
+  };
   function lhun(numberCard) {
-    // debugger;
     var creditCardNumber = onlyNumbers(lengthCard(numberCard));
     if (creditCardNumber !== undefined) {
-      var arr = [];
-      var sumaTotal = 0;
-      for (var index = creditCardNumber.length - 1; index >= 0; index--) {
+      let arr = [];
+      let sumTotal = 0;
+      for (let index = creditCardNumber.length - 1; index >= 0; index--) {
         arr.push(creditCardNumber[index]);
       }
-      for (var index = 1; index < arr.length; index = index + 2) {
+      for (let index = 1; index < arr.length; index += 2) {
         arr[index] = arr[index] * 2;
         if (arr[index] >= 10) {
           arr[index] = arr[index] - 9;
         }
       }
+      // for (var index = 0; index < arr.length; index++) {
+      //   sumTotal = sumTotal + parseInt(arr[index]);
+      // } ES5
+      /* ES6 usando el medodo map creara un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos*/
+      arr.map(function(sumTotal, index) {
+        return sumTotal + parseInt(arr[index]);
+      });
 
-      for (var index = 0; index < arr.length; index++) {
-        sumaTotal = sumaTotal + parseInt(arr[index]);
-      }
-
-      if (sumaTotal % 10 === 0) {
+      if (sumTotal % 10 === 0) {
         console.log('Es una tarjeta valida');
         return true;
       } else {
@@ -95,22 +88,19 @@
       return false;
     }
   }
-  function validaCampos(name, cvv, date) {
+  function validateFields(name, cvv, date) {
     var validaDate = validateFormatDate(date);
     var validarCvv = onlyNumbers(validateCvv(cvv));
     var validarName = onlyLetters(validateName(name));
-    if (validaDate !== undefined && validarCvv !== undefined && validarName !== undefined) {
-      return true;
-    } else {
-      return false;
-    }
+    var condition = (validaDate !== undefined && validarCvv !== undefined && validarName !== undefined) ? true : false;
+    return condition;
   }
   var libraryCard = {
-    isValidCreditCard: function (name, numberCard, cvv, date, arr, json) {
-      debugger;
+    isValidCreditCard: function(name, numberCard, cvv, date, arr, json) {
       if (lhun(numberCard) && validaCampos(name, cvv, date)) {
-        if (find(arr, numberCard)) {
-          if (find(json[numberCard], cvv)) {
+        /* El metodo find devuelve el valor del primer elemento del array que cumple la función de prueba proporcionada. En cualquier otro caso se devuelve undefined. ES6*/
+        if (Object.keys(data).find(i => i === numberCard)) {
+          if (data[numberCard].find(i => i === cvv)) {
             return true;
           }
         } else {
@@ -122,7 +112,8 @@
     }
   };
   if (typeof window.libraryCard === 'undefined') {
-    window.libraryCard = window._ = libraryCard;
+    // personalizando libreria
+    window.libraryCard = window.ºº = libraryCard;
   } else {
     console.log('Ya existe libreria');
   }
