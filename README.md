@@ -1,6 +1,6 @@
 ## LibraryCard.js
 
-Creamos una librería que valida un tarjeta de crédito usuano como datos de entrada el nombre del usuario, código de verificacion, fecha de vencimiento y el número de la tarjeta de crédito.Para ello ultilizamos como base el algoritmo de Lhun.
+Creamos una librería que valida un tarjeta de crédito usuando como datos de entrada el nombre del usuario, código de verificacion, fecha de vencimiento y el número de la tarjeta de crédito.Para ello ultilizamos como base el algoritmo de Lhun.
 ___
 
 ### REQUISITOS
@@ -50,7 +50,7 @@ ___
   Implementando funcionalidad anuestra libreria para ello hicimos un trabajo colaborativo en git y nos reunimos el fin de semana y en     las tardes para complementar los conceptos que habiamos averiguado y asi poder ponerlo en practica en la libreria, asi tambien nos       sirvio bastante las clases de fundamentos de javascript.
   
   ___**SEMANA3**___
-  
+   Demo final
   
   
 ### Herramientas Utilizadas
@@ -119,3 +119,8 @@ form.addEventListener('submit', (e) => {
 A la hora de hacer las validaciones, la librería debería de añadir la clase
 `.error` a los `<input>`s que no pasen la validación, o la clase `.success`
 en caso de que sí pase.
+
+### **Autoras**
+
+>##### Yolanda Ventura Chavez
+>##### Vanessa Mendoza Inoñan
