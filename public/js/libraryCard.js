@@ -54,8 +54,8 @@
       return name;
     }
   };
- var lhun = (numberCard) => {
-    var creditCardNumber = onlyNumbers(lengthCard(numberCard));
+  const lhun = (numberCard) => {
+    let creditCardNumber = onlyNumbers(lengthCard(numberCard));
     if (creditCardNumber !== undefined) {
       let arr = [];
       let sumTotal = 0;
@@ -87,15 +87,15 @@
       console.log('Verifique el numero de su tarjeta');
       return false;
     }
-  }
- var validateFields = (name, cvv, date)=> {
-    var validaDate = validateFormatDate(date);
-    var validarCvv = onlyNumbers(validateCvv(cvv));
-    var validarName = onlyLetters(validateName(name));
-    var condition = (validaDate !== undefined && validarCvv !== undefined && validarName !== undefined) ? true : false;
+  };
+  const validateFields = (name, cvv, date)=> {
+    let validaDate = validateFormatDate(date);
+    let validarCvv = onlyNumbers(validateCvv(cvv));
+    let validarName = onlyLetters(validateName(name));
+    let condition = (validaDate !== undefined && validarCvv !== undefined && validarName !== undefined) ? true : false;
     return condition;
-  }
-  var libraryCard = {
+  };
+  const libraryCard = {
     isValidCreditCard: function(name, numberCard, cvv, date) {
       if (lhun(numberCard) && validateFields(name, cvv, date)) {
         /* El metodo find devuelve el valor del primer elemento del array que cumple la función de prueba proporcionada. En cualquier otro caso se devuelve undefined. ES6*/

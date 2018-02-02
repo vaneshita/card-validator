@@ -6,20 +6,21 @@ $(document).ready(function() {
   var inputName = $('.inputName');
   var imgModal = $('#imgModal');
   var nameModal = $('.name');
-  var cardModal = $('card');
+  var cardModal = $('.ncard');
   var cvvModal = $('.cvv');
   var dateModal = $('.fecha');
-  buttonNext.on('click', function() {
+  buttonNext.on('click', function(event) {
     if (libraryCard.isValidCreditCard(inputName.val(), inputCard.val(), inputCvv.val(), inputDate.val())) {
-      alert('usuario valido');
+      alert('USUARIO VALIDO');
+      event.preventDefault();
       buttonNext.attr('data-target', '#exampleModal');
       imgModal.attr('src', data[inputCard.val()][data[inputCard.val()].length - 1]);
-      nameModal.text(inputName.val());
+      nameModal.text(inputName.val().toUpperCase());
       cardModal.text(inputCard.val());
       cvvModal.text(inputCvv.val());
       dateModal.text(inputDate.val());
     } else {
-      alert('No soy tarjeta');
+      alert('DATOS NO VALIDOS');
     }
   });
 });

@@ -1,4 +1,4 @@
-.vh100 {    
+.vh100 {
   height: 100vh;
 }
 h1 {
@@ -26,7 +26,7 @@ img, .carrusel {
   border : 2px solid #000099;;
   border-radius : 6px;
   font-size: 20px;
-  font-weight: 400;   
+  font-weight: 400;
 }
 .download1 {
   padding: 2em;
@@ -38,8 +38,12 @@ header {
   background : linear-gradient(to bottom, #000099 0%, #0099ff 100%);
   padding: 3em;
 }
+.modal-header {
+  background : linear-gradient(to bottom, #000099 0%, #0099ff 100%);
+  padding: 3em;
+}
 @media (min-width: 1280px) {
- 
+
   header {
       padding: 3em;
   }
