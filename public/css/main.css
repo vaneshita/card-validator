@@ -1,76 +1,50 @@
-
-.porcent100{
-  width: 100%;
+.vh100 {    
+  height: 100vh;
 }
 h1 {
-  margin-right: 681px;
-  color: white;
-  font-style: italic;
-}
-h2 {
-  margin-left: 47px;
-  color: blue;
-}
-.color {
-  background-color: lightgray;
-}
-h3 {
-  color: #000099;
-}
-.formulario1 {
-  height: 60vh;
-  width: 40%;
-  margin-top: 7em;
-  border-radius: 6px;
-  border: 2px solid #000099;
-  margin-left: 400px;
-  padding: 2em 0;
-  background-color: lightgray;   
-}
-.formulario {
-  height: 60vh;
-  width: 40%;
-  margin-top: 7em;
-  border-radius: 6px;
-  border: 2px solid #000099;
-  margin-left: 400px;
-  padding: 2em 0;
+color: white;
+font-style: italic;
 }
 img, .carrusel {
   height: 20vh;
   margin-top: 1em;
 }
-.navbar, .modal-header, .modal-footer {
-  background: linear-gradient(to bottom, #000099 0%, #0099ff 100%);
-}
-
-.carousel-indicators li {
-background: none !important;
-}
-.carousel-indicators .active {
-  background: none !important;
-}
 #imgModal {
   height: auto;
 }
+.formulario1, .download{
+  padding: 2em;
+}
+.formulario {
+  padding: 2em;
+  color: white;
+}
+
+.text1 {
+  background-color :rgb(239, 244, 245);
+  padding: 2em;
+  border : 2px solid #000099;;
+  border-radius : 6px;
+  font-size: 20px;
+  font-weight: 400;   
+}
+.download1 {
+  padding: 2em;
+  background-color :rgb(214, 218, 219);
+  border : 2px solid #000099;;
+  border-radius : 6px;
+}
+header {
+  background : linear-gradient(to bottom, #000099 0%, #0099ff 100%);
+  padding: 3em;
+}
 @media (min-width: 1280px) {
-  img , .carrusel {
+ 
+  header {
+      padding: 3em;
+  }
+  img, .carrusel {
     height: 40vh;
-    margin-top: 3em;
-  }
-  .formulario {
-    margin-top: 5em;
-    margin-left: 350px;
-  }
-  
-  .navbar {
-    height: 10vh;
-  }
- h1{
-  margin-right: 681px;
- }
- h2{
- margin-left: 345px;
- color: blue;
- }
+    margin-top: 1em;
+}
 }
