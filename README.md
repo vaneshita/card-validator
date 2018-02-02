@@ -71,8 +71,8 @@ ___
 
 ### Imagenes 
 ![planes](public/assets/images/1.png)
-![planes](public/assets/images/capture.png)
-![planes](public/assets/images/capture1.png)
+![planes](public/assets/images/capture.PNG)
+![planes](public/assets/images/capture1.PNG)
 
 ### Link de referencias
 
