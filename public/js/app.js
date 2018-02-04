@@ -51,7 +51,7 @@ $(document).ready(function () {
         '<p>' + `< script src="js/libraryCard.js"></script>` + '</p>' +
         '<p>' + `< script src="js/app.js"></script>` + '</p>' +
         '<p>' + `<a class="waves-effect waves-light btn btn-primary btn-large 
-    " href="https://github.com/YolandaVenturaChz/card-validator/blob/master/public/js/app.js"
+    " href="https://github.com/vaneshita/card-validator/blob/master/public/js/app.js"
     download="libraryCard.js.zip">Descargar libraryCard.js</a>`+ '</p></div>');
 
     texto.append('<div class=" d-flex flex-column justify-content-center align-items-center">' +
