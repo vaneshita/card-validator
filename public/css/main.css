@@ -25,13 +25,16 @@ section .container, section .container2 {
 section {
   background: linear-gradient(to left, #33cccc 64%, #006699 100%);
 }
+p {
+  font-size: 20px;
+}
 .text1 {
   background-color :rgb(239, 244, 245);
   padding: 2em;
   border : 2px solid #000099;;
   border-radius : 6px;
-  font-size: 20px;
-  font-weight: 400;
+  
+  
 }
 .download1 {
   padding: 2em;
