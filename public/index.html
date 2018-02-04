@@ -14,100 +14,64 @@
 </head>
 
 <body class="d-flex flex-column justify-content-between">
+  <!--d-flex flex-column justify-content-between-->
   <header class="d-flex flex-column">
-    <div class="containe">
+    <!--d-flex flex-column-->
+    <div class="container-fluid">
       <div class="row d-flex flex-column">
-        <nav class="linkHeader d-flex flex-row justify-content-between col-12 col-md-12">
-          <ul class="col-12 col-md-1">
-           <li><a href=""><span ><img class="col-md-10"src="assets/icons/favicon-96x96.png" alt=""></span></a></li>
+        <!--d-flex flex-column-->
+        <nav class="linkHeader d-flex flex-row justify-content-between"><!--d-flex flex-row justify-content-between col-12 col-md-12-->
+          <ul class="d-flex flex-row justify-content-between align-items-center col-12 col-md-12"><!--col-4 col-md-1-->
+           <li><a href=""><span ><img class=""src="assets/icons/favicon-96x96.png" alt=""></span></a></li><!--col-10 col-md-10-->
+           <li><a style="border: 1px solid blue; padding: 0.6em; border-radius:5px;" href="" class="font-weight-bold "><span>DEMO</span></a></li>
+           <li><a  href="https://github.com/vaneshita/card-validator" class="font-weight-bold "><span class="icon-github-circled-alt2"></span></a></li>
+           <li><a  href="" class="font-weight-bold "><span class="icon-download"></span></a></li>
           </ul>         
-          <ul class="d-flex flex-row justify-content-around align-items-center col-12 col-md-5">
-            <li><a href="" class="font-weight-bold"><span class="icon-github-circled-alt2"></span></a></li>
-            <li><a href="" class="font-weight-bold">DOWNLOAD<span class="icon-download"></span></a></li>
-            <li><a href="" class="font-weight-bold"><span>DEMO</span></a></li>
-          </ul>
         </nav>
       </div>
     </div>
     <div class="imag">
-      <div class="imagHeader d-flex flex-column justify-content-center align-items-center">
+      <!--col-12 col-md-12-->
+      <div class="imagHeader d-flex flex-column justify-content-center font-weight-bold align-items-center">
+        <!--d-flex flex-column justify-content-center align-items-center-->
         <h1>LIBRARY-CARD</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam quos alias repellendus iusto libero molestiae, atque
-          facilis aspernatur excepturi! Rem magnam incidunt delectus ipsam earum, nemo nostrum necessitatibus nobis nam!</p>
+        <h2>La libreria que necesitabas, a tu medida</h2>
       </div>
     </div>
   </header>
-  <main>
-    <section>
-      <!-- carrusel
-      <div class="carrusel container">
-        <div class="row">
-          <div id="carouselExampleIndicators" class="carousel slide col-md-6" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block ancho Responsive image" src="assets/images/visa2.jpg" alt="First slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block ancho Responsive image" src="assets/images/visa2.jpg" alt="Second slide">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      fin de slider -->
-    </section>    
-
+  <main class="">
     <section>
       <div class="formulario1 container">
         <div class="row d-flex">
           <div class="download  col-12 col-md-12" id="textHtm"></div>
           <div class="col-12 col-md-12" id="texto"></div>
-          <div class="download col-12 col-md-6"id="textHtm1"></div>
-          <div class=" download col-12 col-md-6"id="example1"></div>
+          <div class="download col-12 col-md-6" id="textHtm1"></div>
+          <div class=" download col-12 col-md-6" id="example1"></div>
           <div class="col-12 col-md-12" id="texto1"></div>
-          <div class="download col-12 col-md-6"id="textHtm2"></div>
-        </div>
-      </div>
-    </section>
-
-
-    <section>
-        <div class="formulario1 container">
-          <div class="row d-flex">
-            
-            <div class="download col-12 col-md-6">
-              <div class="text1">
-                <h3 class="text-primary font-weight-bold">Datos para la demo</h3>
-                <p>Usar los siguientes datos para validar una tarjeta </p>
-                <p>* Nombre del usuario: hugo gomez yuma</p>
-                <p>* Numero de tarjeta de credito: 4544164785372342</p>
-                <p>* Codigo de verificacion(cvv): 223456</p>
-                <p>* Fecha de Expiracion: 23/09/2019</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    <!-- inicio de  formulario -->
-    <section>
-      <div class="formulario container">
-        <div class="row d-flex flex-column justify-content-center align-items-center">
-          <div class="download1 col-md-7 d-flex flex-column justify-content-center align-items-center">
-            <form class="col-12 col-md-10">
+          <div class="download col-12 col-md-6" id="textHtm2"></div>
+          <div class=" download col-12 col-md-6" id="example2"></div>
+          <!-- carrusel -->
+          <div class="carrusel container" id="carrusel"></div>
+          <br>
+          <!-- fin de slider -->
+          <div class="col-12 col-md-12" id="texto2"></div>
+          <div class="download col-12 col-md-6" id="datos"></div>
+          <div class="download col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+            <form class=" text1 col-12 col-md-12">
               <div class="col-12 col-md-12 mb-3">
-                <label for="validationTooltip01" class="text-primary font-weight-bold h5">Nombre Completo</label>
+                <label for="validationTooltip01" class="text-primary font-weight-bold ">Nombre Completo</label>
                 <input type="text" class="form-control" id="inputName" placeholder="Nombre Completo">
               </div>
               <div class="col-12 col-md-12 mb-3">
-                <label id="box" for="validationTooltip03" class="text-primary font-weight-bold h5">Numero de Tarjeta</label>
+                <label id="box" for="validationTooltip03" class="text-primary font-weight-bold ">Numero de Tarjeta</label>
                 <input class="form-control" id="inputCard" placeholder="Numero de Tarjeta">
               </div>
               <div class="col-12 col-md-12 mb-3">
-                <label id="box" for="validationTooltip03" class="text-primary font-weight-bold h5">N° CVV</label>
+                <label id="box" for="validationTooltip03" class="text-primary font-weight-bold ">N° CVV</label>
                 <input class="form-control" id="inputCvv" placeholder="cvv">
               </div>
               <div class="col-12 col-md-12 mb-3">
-                <label id="box" for="validationTooltip04" class="text-primary font-weight-bold h5">Fecha de Expiración</label>
+                <label id="box" for="validationTooltip04" class="text-primary font-weight-bold ">Fecha de Expiración</label>
                 <input type="date" class="form-control" id="inputDate" placeholder="Fecha de Expiración">
               </div>
               <div class="col-12 col-md-12 mb-3">
@@ -118,8 +82,10 @@
           </div>
         </div>
       </div>
+      <div id="pageFooter"></div>
     </section>
   </main>
+  
   <!-- fin de formulario -->
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -139,19 +105,18 @@
             <p class="cvv"></p>
             <p class="fecha"></p>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
     <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
     <script src="vendors/bootstrap-4/js/bootstrap.min.js"></script>
     <script src="vendors/tether/js/tether.min.js"></script>
     <script src="js/data.js"></script>
     <script src="js/libraryCard.js"></script>
-    <script src="js/carrusel.js"></script>
     <script src="js/app.js"></script>
 </body>
-
 </html>
