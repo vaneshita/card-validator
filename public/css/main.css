@@ -1,12 +1,8 @@
 .vh100 {
   height: 100vh;
 }
-h1 {
-color: white;
-font-style: italic;
-}
-img, .carrusel {
-  height: 20vh;
+
+.carrusel {
   margin-top: 1em;
 }
 #imgModal {
@@ -19,7 +15,16 @@ img, .carrusel {
   padding: 2em;
   color: white;
 }
-
+main {
+  background: linear-gradient(to left, #33cccc 64%, #006699 100%);
+  height: 100vh;
+}
+section .container, section .container2 {
+  background: white;
+}
+section {
+  background: linear-gradient(to left, #33cccc 64%, #006699 100%);
+}
 .text1 {
   background-color :rgb(239, 244, 245);
   padding: 2em;
@@ -31,13 +36,31 @@ img, .carrusel {
 .download1 {
   padding: 2em;
   background-color :rgb(214, 218, 219);
-  border : 2px solid #000099;;
+  border : 2px solid #000099;
   border-radius : 6px;
 }
-header {
-  background : linear-gradient(to bottom, #000099 0%, #0099ff 100%);
-  padding: 3em;
+li {
+  list-style: none;
 }
+header a {
+  color :linear-gradient(to bottom, #000099 0%, #0099ff 100%);
+  font-size: 20px;
+}
+header .imagHeader {
+  height: 500px;
+  background-image: url("../assets/images/visa3.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.6;
+ 
+}
+header .imag{
+  /*background : linear-gradient(to bottom, #000099 0%, #0099ff 100%);*/
+  background:  rgba(0, 0, 0, 0.4);  
+  color: white;
+}
+
 .modal-header {
   background : linear-gradient(to bottom, #000099 0%, #0099ff 100%);
   padding: 3em;
@@ -47,11 +70,5 @@ header {
 }
 @media (min-width: 1280px) {
 
-  header {
-      padding: 3em;
-  }
-  img, .carrusel {
-    height: 40vh;
-    margin-top: 1em;
-}
+ 
 }
